@@ -3,19 +3,19 @@ A chatbot that gathers data to replicate how a parent would talk to his son/daug
 
 
 
-                                                      Nishad Aherrao
+                                                    # Nishad Aherrao
 
-Objective:
+    Objective:
 
 To create a prolog database with data enough to replicate a chat bot that acts intelligently. Main purpose of the bot is to converse with a child who is back from school and enquire about his overall day what he did what he didn't and if he had fun doing it.
 
-Challenges:
+    Challenges:
 
 Main challenges in this were deciding on a language for making the GUI as some were high level and some were lower level but didn't have enough documentation or guides for help. I ended up going with python as I was already comfortable using python. I used the module/library called pyswip. It acts as a bridge in between prolog and python.
 
 Other than that to tackle the duplicate activities for example draw can be under do() or play() with different followups and to make sure they are set to positive liking and not asked again.
 
-SETUP:
+    SETUP:
 
 Install SWIprolog, Python and pyswip library fort this app to run.
 
@@ -33,7 +33,7 @@ export PATH=$PATH:PATH=$PATH:/Applications/SWI-Prolog.app/Contents/swipl/bin/x86
 export DYLD_FALLBACK_LIBRARY_PATH=/Applications/SWI-Prolog.app/Contents/swipl/lib/x86_64-darwin15.6.0
 
 
-Explanation of code:
+    Explanation of code:
 
 I have used the easygui library to make simple dialogue boxes without defining color or height and just use them for the yes and no input.
 
@@ -55,7 +55,7 @@ Also theres a snippet to take care of the duplicate activities occurring in mult
 
 Because of the pyswip I was able to use assertz to add to the database while running the program through python and gathering the input through python. So I was not only able to read the prolog db but also write to it. I assert or add the positives to the like list and negatives to dislike list after listening to the input and also keep a track of whats asked and whats not in the history list. Also finally use the len() func to help determine when to terminate the prog. (at length 0).
 
-Explaination of the prolog database
+    Explaination of the prolog database
 
 I have five categories of activities with a number of sub activities and with some occurring multiple times as build can be something a child do() as well as play().
 The following are my explanation of each category with relatable definitions.
